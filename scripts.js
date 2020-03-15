@@ -14,4 +14,9 @@ $(document).ready(function() {
         let randomQuote = quoteArray[Math.floor(Math.random() * quoteArray.length)];
         alert(randomQuote);
     })
+
+    $('#btnInput').click(function() {
+        let str = $('#txtInput').val();
+        alert(str);
+    })
 });
