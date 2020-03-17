@@ -32,8 +32,8 @@ $(document).ready(function () {
     $('<p>some text</p>').insertAfter('#4');
 
     $('p').click(function() {
-        let colorArray = ["green", "light green", "dark green", "black", "seagreen", "yellowgreen"]
+        let colorArray = ["green", "black", "yellowgreen", "gold", "orange"]
         let randomColor = colorArray[Math.floor(Math.random() * colorArray.length)];
-        $(this).css('color', 'red');
+        $(this).css('color', randomColor);
     })
 });
