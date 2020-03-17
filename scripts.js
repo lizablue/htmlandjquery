@@ -45,4 +45,17 @@ $(document).ready(function () {
     $('#nameBtn').click(function(){
         $('<span>liz</span>').appendTo('#nameDiv')
     })
+
+    let friendsArray = ['michael', 'pam', 'jim', 'dwight', 'creed', 'kelly', 'angela', 'kevin', 'oscar', 'toby'];
+    let x = 0
+
+    $('#friendBtn').click(function(){
+        if(x < friendsArray.length) {
+            $('<li>' + friendsArray[x] + '</li>').appendTo('#friendList');
+            x++;
+        } else {
+            alert('I don\'t have any more friends');
+        }
+    })
+
 });
