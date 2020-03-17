@@ -30,10 +30,19 @@ $(document).ready(function () {
 
     // add a paragraph with text
     $('<p>some text</p>').insertAfter('#4');
-
+    
+    // change paragraph text color on click
     $('p').click(function() {
         let colorArray = ["green", "black", "yellowgreen", "gold", "orange"]
         let randomColor = colorArray[Math.floor(Math.random() * colorArray.length)];
         $(this).css('color', randomColor);
+    })
+
+    // add a button and
+    $('<button id=nameBtn>show name</button>').insertAfter('#5');
+    $('<div id=nameDiv></div>').insertAfter('#nameBtn');
+
+    $('#nameBtn').click(function(){
+        $('<span>liz</span>').appendTo('#nameDiv')
     })
 });
