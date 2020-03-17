@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
     // create first button
     let btnText = 'click me';
     $('<button id="firstBtn">' + btnText + '</button>').insertAfter('#1');
-    
+
     // display alert on button click
-    $('#firstBtn').click(function() {
+    $('#firstBtn').click(function () {
         let quoteArray = [
             '\"Whenever I\'m about to do something, I think, \'Would an idiot do that?\'\" - Dwight Schrute',
             '\"How would I describe myself? Three words: hardworking, alpha male, jackhammer, merciless, insatiable.\" - Dwight Schrute',
@@ -15,8 +15,17 @@ $(document).ready(function() {
         alert(randomQuote);
     })
 
-    $('#btnInput').click(function() {
+    // display text from input in an alert
+    $('#btnInput').click(function () {
         let str = $('#txtInput').val();
         alert(str);
     })
+
+    // change div background color on mouseover
+    $('#color').hover(function() {
+        $(this).css("background-color", "green");
+    }, function () {
+        $(this).css("background-color", "");
+    });
+
 });
