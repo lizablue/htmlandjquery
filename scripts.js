@@ -28,4 +28,12 @@ $(document).ready(function () {
         $(this).css("background-color", "");
     });
 
+    // add a paragraph with text
+    $('<p>some text</p>').insertAfter('#4');
+
+    $('p').click(function() {
+        let colorArray = ["green", "light green", "dark green", "black", "seagreen", "yellowgreen"]
+        let randomColor = colorArray[Math.floor(Math.random() * colorArray.length)];
+        $(this).css('color', 'red');
+    })
 });
